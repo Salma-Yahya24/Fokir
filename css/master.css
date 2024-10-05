@@ -1,0 +1,901 @@
+/* Start Main Component */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 0 15px;
+}
+.bg-gray {
+  background-color: #f1f1f1;
+}
+.sec-title h2 {
+  color: #333333;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 30px;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  position: relative;
+  text-transform: capitalize;
+  text-align: center;
+}
+.sec-title h2::before {
+  content: "";
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #ff305b;
+  padding: 4px 0 5px;
+  width: 70px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.sec-title h2::after {
+  content: "";
+  background-color: #ff305b;
+  bottom: 5px;
+  height: 1px;
+  width: 160px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+}
+
+/* End Main Component */
+/* Start NavBar */
+.nav-bar {
+  padding: 0 60px;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.nav-bar .logo a {
+  color: #ff305b;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  display: inline-block;
+  padding: 18px 0;
+  font-weight: bold;
+}
+.nav-bar .links ul {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  float: right;
+  padding: 0 60px;
+}
+.nav-bar .links ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+.nav-bar .links ul li a {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  padding: 20px 0;
+  transition: all 0.4s ease-in-out;
+}
+.nav-bar .links ul li a.active {
+  color: #ff305b;
+}
+.nav-bar .links ul li a:hover {
+  color: #ff305b;
+}
+/* End NavBar */
+/* Start Header */
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../images/header.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.header .text {
+  position: absolute;
+  text-align: center;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header .text h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+.header .text h1 {
+  color: #ff305b;
+  font-size: 70px;
+  text-transform: uppercase;
+}
+.header .text h4 {
+  font-size: 26px;
+  color: #fff;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+/* End Header */
+
+/* Start About */
+.about {
+  padding: 100px 100px 125px;
+}
+.about .image {
+  width: 35%;
+  float: left;
+  border: 5px solid #555555;
+  border-radius: 3px;
+}
+.about .image .wrapper {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  overflow: hidden;
+}
+.about .image img {
+  border-radius: 5px;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+.about .image .layer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.57);
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.about .image .layer a {
+  position: relative;
+  text-align: center;
+  z-index: 3;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.about .image .layer a i {
+  padding: 0 10px;
+  font-size: 20px;
+  color: white;
+  transition: all 0.5s;
+}
+.about .image .layer a i:hover {
+  color: #ff305b;
+}
+.about .image .wrapper:hover .layer {
+  top: 0;
+}
+.about .text {
+  padding-left: 80px;
+  width: 65%;
+  float: right;
+}
+.about .text h2 {
+  line-height: 22px;
+  padding-left: 13px;
+  margin-bottom: 25px;
+  font-size: 36px;
+  color: #333333;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+}
+.about .text h2::after {
+  content: "";
+  background-color: #ff305b;
+  height: 100%;
+  width: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about .text p {
+  line-height: 1.5;
+  color: #555555;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed #999999;
+}
+.about .text ul li {
+  width: 50%;
+  float: left;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 25px;
+}
+.about .text ul li span {
+  color: #333333;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+.btns a {
+  background-color: #ff305b;
+  color: #fff;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.btns a:hover {
+  background-color: #ec2403;
+}
+.btns a i {
+  margin-left: 5px;
+}
+.about .clear {
+  clear: both;
+}
+/* End About */
+
+/* Start Services */
+.services {
+  padding: 100px 0 54px;
+}
+.services .boxes {
+  padding: 0 15px;
+}
+.services .boxes .box {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 40px 15px;
+  transition: all 0.5s;
+}
+.services .boxes .box:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  background-color: #fff;
+}
+.services .boxes .clear {
+  clear: left;
+}
+.services .boxes .box i {
+  color: #ff305b;
+  display: block;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.services .boxes .box h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333333;
+}
+.services .boxes .box p {
+  color: #555555;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400px;
+  line-height: 1.5;
+}
+/* End Services */
+
+/* Start Portfolio */
+.portfolio {
+  padding: 100px 0 70px;
+}
+.portfolio .album {
+  padding-top: 20px;
+}
+.portfolio .album .photos {
+  float: left;
+  width: 33.33%;
+  padding: 0 0 30px 30px;
+}
+.portfolio .album .photos .photo {
+  overflow: hidden;
+  position: relative;
+}
+.portfolio .album .photos .photo .icon {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.portfolio .album .photos .icon:hover {
+  opacity: 1;
+}
+.portfolio .photos .icon i {
+  bottom: 15px;
+  color: #ff305b;
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+}
+.portfolio .album .photos .photo img {
+  width: 100%;
+  display: block;
+}
+.portfolio .clear {
+  clear: both;
+}
+/* End Portfolio */
+
+/* Start statstics */
+.statstics {
+  padding: 40px 0;
+}
+.statstics .boxes {
+  padding: 0 15px;
+}
+.statstics .boxes .box {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 40px 15px;
+}
+.statstics .boxes .clear {
+  clear: both;
+}
+.statstics .boxes .box i {
+  color: #ff305b;
+  display: block;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+.statstics .boxes .box h3 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #333333;
+}
+.statstics .boxes .box h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555555;
+  margin: 0;
+}
+/* End statstics */
+
+/* Start Feedback */
+.feedback {
+  padding: 100px 0;
+  overflow: hidden;
+}
+.feedback .card {
+  width: 60%;
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 10px;
+  position: relative;
+}
+.card .image {
+  width: 20%;
+  float: left;
+}
+.card .image img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 10;
+}
+.card .text {
+  width: 80%;
+  float: right;
+}
+.card .text h3 {
+  color: #333333;
+  font-size: 26px;
+  font-weight: 600;
+}
+.card .text h4 {
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 18px;
+}
+.card .text h4 a {
+  color: #777777;
+  font-size: 15px;
+}
+.card .text p {
+  color: #555555;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  margin: 0 0 15px;
+}
+.card .text .rate {
+  color: #f1c30d;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+.feedback .card .shape {
+  width: 0;
+  border-top: 80px solid #ff305b;
+  border-bottom: 80px solid transparent;
+  border-left: 80px solid #ff305b;
+  border-right: 80px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.feedback .card .clear {
+  clear: both;
+}
+/* End Feedback */
+/* Start Blog */
+.blog {
+  padding: 100px 70px 70px;
+  background-color: #f1f1f1;
+}
+.blog .boxes {
+  background-color: #f1f1f1;
+}
+.blog .boxes .box {
+  width: 50%;
+  float: left;
+  padding: 0 15px 30px 15px;
+}
+.blog .boxes .clear {
+  clear: both;
+}
+.blog .boxes .box .image img {
+  width: 100%;
+}
+.blog .boxes .box .data {
+  background-color: #fff;
+  padding: 0 0 20px;
+}
+.blog .boxes .box .data time {
+  font-size: 16px;
+  color: #555555;
+  padding: 10px 20px;
+}
+.blog .boxes .box .data h3 {
+  margin-bottom: 20px;
+}
+.blog .boxes .box .data h3 a {
+  color: #333333;
+  font-size: 24px;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+.blog .boxes .box .data h3 a:hover {
+  color: #ff305b;
+}
+.blog .boxes .box .data p {
+  color: #555555;
+  font-size: 17px;
+  line-height: 1.5;
+  padding: 0 20px 15px;
+}
+.blog .boxes .box .data a {
+  color: #333333;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 0 20px;
+  transition: all 0.5s;
+}
+.blog .boxes .box .data a:hover {
+  color: #ff305b;
+}
+
+/* End Blog */
+
+/* Start Contact */
+.contact {
+  padding: 100px 0;
+}
+.contact .form {
+  width: 70%;
+  margin: auto;
+  padding: 30px 40px;
+}
+.contact .form ul li.flt-lft {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  outline: none;
+}
+.contact .form ul li {
+  padding: 6px 12px;
+}
+.contact .form ul li input {
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+
+  border-radius: 5px;
+
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+.contact .form ul li textarea {
+  height: auto;
+  width: 100%;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  resize: both;
+}
+.contact .form ul li textarea:focus,
+.contact .form ul li input:focus {
+  outline: none;
+  border-color: #ff305b;
+}
+.contact .form ul li input[type="submit"] {
+  background-color: #ff305b;
+  border-color: #ff305b;
+  color: white;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  opacity: 1;
+  padding: 0 20px;
+  height: 40px;
+  width: max-content;
+  outline: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+.contact .form ul li input[type="submit"]:hover {
+  background-color: #ec2403;
+}
+.contact .form ul .clear {
+  clear: both;
+}
+/* End Contact */
+
+/* Start Footer */
+.footer {
+  background: #333333 none repeat scroll 0 0;
+  padding: 50px 0;
+  text-align: center;
+}
+.footer .social-icons a i {
+  padding: 0 10px;
+  font-size: 18px;
+  color: white;
+  transition: all 0.5s;
+}
+.footer .social-icons a i:hover {
+  color: #ff305b;
+}
+.footer p {
+  color: #fff;
+  font-size: 16px;
+  padding-top: 10px;
+}
+.footer p a {
+  color: #ff305b;
+}
+.footer p a:hover {
+  text-decoration: underline;
+}
+/* End Footer */
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+  .sec-title h2 {
+    font-size: 32px;
+  }
+  .nav-bar {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+  }
+  .nav-bar .logo a {
+    font-size: 24px;
+    display: block;
+    position: relative;
+  }
+  .nav-bar .links ul {
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    padding: 0;
+  }
+  .nav-bar .links ul li {
+    background-color: #333;
+    border-bottom: 1px solid #535353;
+  }
+  .nav-bar .links ul li:last-child {
+    border-bottom: none;
+  }
+  .header .text h3 {
+    font-size: 22px;
+  }
+  .header .text h1 {
+    font-size: 38px;
+  }
+  .header .text h4 {
+    font-size: 18px;
+  }
+  .about {
+    padding: 60px 0px;
+  }
+  .about .image {
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+  .about .image .wrapper {
+    left: 0;
+    top: 0;
+  }
+  .about .text {
+    padding: 0;
+    margin-top: 30px;
+    width: 100%;
+  }
+  .about .text ul li {
+    width: 100%;
+    display: block;
+  }
+  .services {
+    padding: 60px 0 30px;
+  }
+  .services .boxes {
+    padding: 0;
+  }
+  .services .boxes .box {
+    width: 100%;
+    display: block;
+  }
+  .portfolio {
+    padding: 60px 0 30px;
+  }
+  .portfolio .album .photos {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .statstics {
+    padding: 60px 0 30px;
+  }
+  .statstics .boxes {
+    padding: 0;
+  }
+  .statstics .boxes .box {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  .statstics .boxes .box h3 {
+    margin-bottom: 5px;
+  }
+  .feedback {
+    padding: 60px 0;
+  }
+  .feedback .card {
+    width: 100%;
+    padding: 20px;
+  }
+  .card .image {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .card .text {
+    width: 100%;
+    display: block;
+  }
+  .blog {
+    padding: 60px 0 30px;
+  }
+  .blog .boxes .box {
+    width: 100%;
+    display: block;
+  }
+  .contact {
+    padding: 60px 0;
+  }
+  .contact .form {
+    width: 100%;
+    padding: 0;
+  }
+  .contact .form ul li.flt-lft {
+    width: 100%;
+    display: block;
+    padding: 0;
+  }
+  .contact .form ul li {
+    padding: 0;
+  }
+  .contact .form ul li input {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .nav-bar {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+  }
+  .nav-bar .links ul {
+    padding: 0 15px;
+    display: block;
+  }
+  .about {
+    padding: 70px 0 70px;
+  }
+  .about .image {
+    width: 50%;
+    border: none;
+    padding: 0;
+    float: left;
+  }
+  .about .image .wrapper {
+    left: 0;
+    top: 0;
+  }
+  .about .text {
+    margin-top: 0;
+    width: 50%;
+    float: right;
+    padding-left: 30px;
+  }
+  .about .text ul li {
+    width: 50%;
+    float: left;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  .about .text ul li span {
+    font-size: 14px;
+  }
+  .btns a {
+    padding: 10px 20px;
+  }
+  .services {
+    padding: 70px 0 24px;
+  }
+  .services .boxes {
+    padding: 0;
+  }
+  .services .boxes .box {
+    width: 50%;
+    float: left;
+  }
+  .portfolio {
+    padding: 70px 0 50px;
+  }
+  .portfolio .album .photos {
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .statstics {
+    padding: 40px 0;
+  }
+  .statstics .boxes .box {
+    width: 25%;
+    float: left;
+  }
+  .feedback {
+    padding: 70px 0;
+  }
+  .feedback .card {
+    width: 100%;
+  }
+  .blog {
+    padding: 70px 0 50px;
+  }
+  .blog .boxes .box {
+    width: 50%;
+    float: left;
+  }
+  .blog .boxes .box .clear {
+    clear: both;
+  }
+  .blog .boxes .box img {
+    width: 100%;
+    display: block;
+  }
+  .blog .boxes .box .data h3 {
+    margin-bottom: 10px;
+  }
+  .blog .boxes .box .data h3 a {
+    font-size: 15px;
+    display: block;
+  }
+  .contact {
+    padding: 70px 0;
+  }
+  .contact .form {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .services {
+    padding: 80px 0 34px;
+  }
+  .services .boxes {
+    padding: 0;
+  }
+  .services .boxes .box {
+    padding: 20px 5px;
+  }
+  .feedback {
+    padding: 80px 0;
+  }
+  .feedback .card {
+    width: 80%;
+  }
+  .blog {
+    padding: 80px 0 50px;
+  }
+  .blog .boxes .box .data h3 {
+    margin-bottom: 10px;
+  }
+  .blog .boxes .box .data h3 a {
+    font-size: 15px;
+    display: block;
+  }
+  .contact {
+    padding: 80px 0;
+  }
+  .contact .form {
+    padding: 0 110px;
+    width: 100%;
+  }
+}
