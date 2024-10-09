@@ -297,6 +297,10 @@ ul {
   display: block;
   font-size: 25px;
   margin-bottom: 20px;
+  transition: 1s;
+}
+.services .boxes .box:hover i{
+  transform: scale(1.3);
 }
 .services .boxes .box h3 {
   font-size: 24px;
